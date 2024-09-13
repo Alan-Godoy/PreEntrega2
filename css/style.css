@@ -1,0 +1,119 @@
+/* reset */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* estilos generales */
+
+body{
+    background-color: #000000;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* estilos de mobile */
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav ul{
+    color: whitesmoke;
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    padding-right: 80px;
+}
+
+/* estilos de main */
+
+main{
+    height: 80vh;
+    margin: 30px 30px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 33%) ;
+    row-gap: 3rem;
+    align-content: center;
+
+}
+
+.introduccion{
+    color: whitesmoke;
+    text-align: center;
+    margin: 100px;
+} 
+
+main div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.redes img{
+    margin: 10px;
+    justify-content: center;
+    display: flex;
+    padding-left: 600px;
+ }
+ 
+ .mapa {
+     display: flex;
+     justify-content: center;
+     margin: 20px;
+ 
+ }
+
+/* estilos de footer */
+
+footer{
+    text-align: center;
+    color: whitesmoke;
+    text-decoration: none;
+    gap: 50px;
+}
+
+
+/* estilos de tablet */
+
+@media screen and (min-width:600px){
+    /* estilos de main */
+
+    main{
+        grid-template-columns: repeat(2, 0.5fr) ;
+        grid-template-rows: repeat(2, 50%) ;
+        column-gap: 1.5rem;
+    }
+
+    main .img-cuatro{
+        grid-column: span 2 ;
+    }
+}
+
+
+/* estilso de desktop */
+
+@media screen and (min-width: 1024px) {
+   main .img-dos{
+        display: block;
+   }
+
+   main{
+        grid-template-columns: repeat(3, 1fr) ;
+        grid-template-rows: 30% 30% 20% ;
+   }
+
+   main .img-uno, main .img-tres{
+        grid-row: span 2;
+   }
+
+   main .img-dos, main .img-cuatro{
+        grid-column: span 1;
+   }
+
+}
